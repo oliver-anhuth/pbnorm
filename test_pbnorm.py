@@ -32,7 +32,7 @@ class Test(TestCase):
             "Postbank-2020-04-06.pdf",
             "Postbank-2020-05-06.pdf",
         ):
-            assert(os.path.isfile(result_file)), "Expected result file " + result_file + " not found"
+            self.assertTrue(os.path.isfile(result_file)), "Expected result file " + result_file + " not found"
         
 
 if __name__ == "__main__":
