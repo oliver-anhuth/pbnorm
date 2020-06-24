@@ -35,18 +35,6 @@ class Test(TestCase):
         ):
             self.assertTrue(os.path.isfile(result_file), "Expected result file {} not found".format(result_file))
         
-    def test_rust_pbnorm(self):
-        result = subprocess.run(["cargo", "run"])
-        self.assertEqual(result.returncode, 0)
-        for result_file in (
-            "Postbank-2020-01-06.pdf",
-            "Postbank-2020-02-06.pdf",
-            "Postbank-2020-03-06.pdf",
-            "Postbank-2020-04-06.pdf",
-            "Postbank-2020-05-06.pdf",
-        ):
-            self.assertTrue(os.path.isfile(result_file), "Expected result file {} not found".format(result_file))
-        
 
 if __name__ == "__main__":
     unittest.main()
