@@ -15,4 +15,6 @@ export function pbnorm() {
     }
 }
 
-pbnorm();
+if (import.meta.main) {
+    pbnorm();
+}
