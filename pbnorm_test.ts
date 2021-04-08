@@ -1,5 +1,4 @@
 import { pbnorm } from "./pbnorm.ts";
-import { assert } from "https://deno.land/std/testing/asserts.ts";
 
 Deno.test("pbnorm", () => {
     for (const file of [
