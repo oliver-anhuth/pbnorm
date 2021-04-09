@@ -7,7 +7,7 @@ export function pbnorm() {
         if (entry.isFile) {
             const match = entry.name.match(re);
             if (match) {
-                const [_, day, month, year] = match;
+                const [, day, month, year] = match;
                 const to = `Postbank-${year}-${month}-${day}.pdf`
                 Deno.renameSync(entry.name, to);
             }
